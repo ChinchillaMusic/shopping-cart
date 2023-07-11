@@ -3,7 +3,7 @@ let updateQuantityPrice = function (ele) {
   let quantity = parseFloat($(ele).find('.quantity input').val());
   let totalPrice = price * quantity;
   if (isNaN(totalPrice)) {
-    price = 0;
+    totalPrice = 0;
   }
   $(ele).children('.total-price').text('$' + totalPrice.toFixed(2));
   return totalPrice;
